@@ -1,0 +1,10 @@
+
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      wget -O paper.jar https://papermc.io/api/v2/projects/paper/versions/1.21.1/builds/45/downloads/paper-1.21.1-45.jar
+      echo "eula=true" > eula.txt
+      java -Xmx2G -Xms2G -jar paper.jar nogui
+    command: echo "Iniciando servidor Paper..."
